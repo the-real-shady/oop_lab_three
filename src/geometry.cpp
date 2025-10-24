@@ -5,6 +5,7 @@
 #include <limits>
 #include <ostream>
 #include <stdexcept>
+#include <vector>
 
 std::istream& operator>>(std::istream& is, Point& point) {
     return is >> point.x >> point.y;
@@ -20,40 +21,38 @@ bool operator==(const Point& lhs, const Point& rhs) {
     return std::fabs(lhs.x - rhs.x) < kEpsilon && std::fabs(lhs.y - rhs.y) < kEpsilon;
 }
 
-static void EnsureValidPolygon(const std::vector<Point>& points) {
-    if (points.size() < 3) {
+static void EnsureValidPolygon(std::size_t count) {
+    if (count < 3) {
         throw std::invalid_argument("Polygon must contain at least three vertices");
     }
 }
 
-double PolygonSignedArea(const std::vector<Point>& points) {
-    EnsureValidPolygon(points);
+double PolygonSignedAreaRaw(const Point* points, std::size_t count) {
+    EnsureValidPolygon(count);
     double area = 0.0;
-    const std::size_t n = points.size();
-    for (std::size_t i = 0; i < n; ++i) {
+    for (std::size_t i = 0; i < count; ++i) {
         const Point& p1 = points[i];
-        const Point& p2 = points[(i + 1) % n];
+        const Point& p2 = points[(i + 1) % count];
         area += (p1.x * p2.y) - (p2.x * p1.y);
     }
     return area / 2.0;
 }
 
-double PolygonArea(const std::vector<Point>& points) {
-    return std::fabs(PolygonSignedArea(points));
+double PolygonAreaRaw(const Point* points, std::size_t count) {
+    return std::fabs(PolygonSignedAreaRaw(points, count));
 }
 
-Point PolygonCentroid(const std::vector<Point>& points) {
-    EnsureValidPolygon(points);
-    const double signedArea = PolygonSignedArea(points);
+Point PolygonCentroidRaw(const Point* points, std::size_t count) {
+    EnsureValidPolygon(count);
+    const double signedArea = PolygonSignedAreaRaw(points, count);
     if (std::fabs(signedArea) <= std::numeric_limits<double>::epsilon()) {
         throw std::invalid_argument("Polygon area is zero; centroid is undefined");
     }
     double cx = 0.0;
     double cy = 0.0;
-    const std::size_t n = points.size();
-    for (std::size_t i = 0; i < n; ++i) {
+    for (std::size_t i = 0; i < count; ++i) {
         const Point& p1 = points[i];
-        const Point& p2 = points[(i + 1) % n];
+        const Point& p2 = points[(i + 1) % count];
         const double cross = (p1.x * p2.y) - (p2.x * p1.y);
         cx += (p1.x + p2.x) * cross;
         cy += (p1.y + p2.y) * cross;
@@ -62,4 +61,18 @@ Point PolygonCentroid(const std::vector<Point>& points) {
     cx *= factor;
     cy *= factor;
     return {cx, cy};
+}
+
+double PolygonSignedArea(const std::vector<Point>& points) {
+    EnsureValidPolygon(points.size());
+    return PolygonSignedAreaRaw(points.data(), points.size());
+}
+
+double PolygonArea(const std::vector<Point>& points) {
+    return std::fabs(PolygonSignedArea(points));
+}
+
+Point PolygonCentroid(const std::vector<Point>& points) {
+    EnsureValidPolygon(points.size());
+    return PolygonCentroidRaw(points.data(), points.size());
 }

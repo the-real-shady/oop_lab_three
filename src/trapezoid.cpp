@@ -2,20 +2,17 @@
 
 #include <iostream>
 #include <stdexcept>
-#include <vector>
 
 Trapezoid::Trapezoid() = default;
 
 Trapezoid::Trapezoid(const std::array<Point, 4>& vertices) : vertices_(vertices) {}
 
 Point Trapezoid::Center() const {
-    std::vector<Point> points(vertices_.begin(), vertices_.end());
-    return PolygonCentroid(points);
+    return PolygonCentroid(vertices_);
 }
 
 double Trapezoid::Area() const {
-    std::vector<Point> points(vertices_.begin(), vertices_.end());
-    return PolygonArea(points);
+    return PolygonArea(vertices_);
 }
 
 std::unique_ptr<Figure> Trapezoid::Clone() const {

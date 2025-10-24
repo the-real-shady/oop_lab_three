@@ -1,5 +1,7 @@
 #pragma once
 
+#include <array>
+#include <cstddef>
 #include <iosfwd>
 #include <vector>
 
@@ -15,6 +17,25 @@ inline bool operator!=(const Point& lhs, const Point& rhs) {
     return !(lhs == rhs);
 }
 
+double PolygonSignedAreaRaw(const Point* points, std::size_t count);
+double PolygonAreaRaw(const Point* points, std::size_t count);
+Point PolygonCentroidRaw(const Point* points, std::size_t count);
+
 double PolygonSignedArea(const std::vector<Point>& points);
 double PolygonArea(const std::vector<Point>& points);
 Point PolygonCentroid(const std::vector<Point>& points);
+
+template <std::size_t N>
+double PolygonSignedArea(const std::array<Point, N>& points) {
+    return PolygonSignedAreaRaw(points.data(), N);
+}
+
+template <std::size_t N>
+double PolygonArea(const std::array<Point, N>& points) {
+    return PolygonAreaRaw(points.data(), N);
+}
+
+template <std::size_t N>
+Point PolygonCentroid(const std::array<Point, N>& points) {
+    return PolygonCentroidRaw(points.data(), N);
+}

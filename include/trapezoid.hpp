@@ -3,7 +3,6 @@
 #include "figure.hpp"
 
 #include <array>
-#include <string>
 
 class Trapezoid : public Figure {
 public:

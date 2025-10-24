@@ -2,20 +2,17 @@
 
 #include <iostream>
 #include <stdexcept>
-#include <vector>
 
 Pentagon::Pentagon() = default;
 
 Pentagon::Pentagon(const std::array<Point, 5>& vertices) : vertices_(vertices) {}
 
 Point Pentagon::Center() const {
-    std::vector<Point> points(vertices_.begin(), vertices_.end());
-    return PolygonCentroid(points);
+    return PolygonCentroid(vertices_);
 }
 
 double Pentagon::Area() const {
-    std::vector<Point> points(vertices_.begin(), vertices_.end());
-    return PolygonArea(points);
+    return PolygonArea(vertices_);
 }
 
 std::unique_ptr<Figure> Pentagon::Clone() const {
