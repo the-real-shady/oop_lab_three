@@ -1,0 +1,5 @@
+if(EXISTS "/workspaces/alpine/labs/oop_lab_three/build/oop_lab_three_tests[1]_tests.cmake")
+  include("/workspaces/alpine/labs/oop_lab_three/build/oop_lab_three_tests[1]_tests.cmake")
+else()
+  add_test(oop_lab_three_tests_NOT_BUILT oop_lab_three_tests_NOT_BUILT)
+endif()

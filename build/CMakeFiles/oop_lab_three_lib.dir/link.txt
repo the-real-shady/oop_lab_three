@@ -1,0 +1,2 @@
+/usr/bin/ar qc liboop_lab_three_lib.a CMakeFiles/oop_lab_three_lib.dir/src/figure.cpp.o CMakeFiles/oop_lab_three_lib.dir/src/figure_array.cpp.o CMakeFiles/oop_lab_three_lib.dir/src/geometry.cpp.o CMakeFiles/oop_lab_three_lib.dir/src/pentagon.cpp.o CMakeFiles/oop_lab_three_lib.dir/src/rhombus.cpp.o CMakeFiles/oop_lab_three_lib.dir/src/trapezoid.cpp.o
+/usr/bin/ranlib liboop_lab_three_lib.a

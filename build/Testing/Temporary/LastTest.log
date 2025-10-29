@@ -1,0 +1,111 @@
+Start testing: Oct 29 13:33 UTC
+----------------------------------------------------------
+1/4 Testing: TrapezoidTest.AreaAndCenterFromInput
+1/4 Test: TrapezoidTest.AreaAndCenterFromInput
+Command: "/workspaces/alpine/labs/oop_lab_three/build/oop_lab_three_tests" "--gtest_filter=TrapezoidTest.AreaAndCenterFromInput" "--gtest_also_run_disabled_tests"
+Directory: /workspaces/alpine/labs/oop_lab_three/build
+"TrapezoidTest.AreaAndCenterFromInput" start time: Oct 29 13:33 UTC
+Output:
+----------------------------------------------------------
+Running main() from /workspaces/alpine/labs/oop_lab_three/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = TrapezoidTest.AreaAndCenterFromInput
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from TrapezoidTest
+[ RUN      ] TrapezoidTest.AreaAndCenterFromInput
+[       OK ] TrapezoidTest.AreaAndCenterFromInput (0 ms)
+[----------] 1 test from TrapezoidTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"TrapezoidTest.AreaAndCenterFromInput" end time: Oct 29 13:33 UTC
+"TrapezoidTest.AreaAndCenterFromInput" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/4 Testing: RhombusTest.EqualityAndClone
+2/4 Test: RhombusTest.EqualityAndClone
+Command: "/workspaces/alpine/labs/oop_lab_three/build/oop_lab_three_tests" "--gtest_filter=RhombusTest.EqualityAndClone" "--gtest_also_run_disabled_tests"
+Directory: /workspaces/alpine/labs/oop_lab_three/build
+"RhombusTest.EqualityAndClone" start time: Oct 29 13:33 UTC
+Output:
+----------------------------------------------------------
+Running main() from /workspaces/alpine/labs/oop_lab_three/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = RhombusTest.EqualityAndClone
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from RhombusTest
+[ RUN      ] RhombusTest.EqualityAndClone
+[       OK ] RhombusTest.EqualityAndClone (0 ms)
+[----------] 1 test from RhombusTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"RhombusTest.EqualityAndClone" end time: Oct 29 13:33 UTC
+"RhombusTest.EqualityAndClone" time elapsed: 00:00:00
+----------------------------------------------------------
+
+3/4 Testing: PentagonTest.AreaAndInequality
+3/4 Test: PentagonTest.AreaAndInequality
+Command: "/workspaces/alpine/labs/oop_lab_three/build/oop_lab_three_tests" "--gtest_filter=PentagonTest.AreaAndInequality" "--gtest_also_run_disabled_tests"
+Directory: /workspaces/alpine/labs/oop_lab_three/build
+"PentagonTest.AreaAndInequality" start time: Oct 29 13:33 UTC
+Output:
+----------------------------------------------------------
+Running main() from /workspaces/alpine/labs/oop_lab_three/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = PentagonTest.AreaAndInequality
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from PentagonTest
+[ RUN      ] PentagonTest.AreaAndInequality
+[       OK ] PentagonTest.AreaAndInequality (0 ms)
+[----------] 1 test from PentagonTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"PentagonTest.AreaAndInequality" end time: Oct 29 13:33 UTC
+"PentagonTest.AreaAndInequality" time elapsed: 00:00:00
+----------------------------------------------------------
+
+4/4 Testing: FigureArrayTest.TotalAreaAndCopy
+4/4 Test: FigureArrayTest.TotalAreaAndCopy
+Command: "/workspaces/alpine/labs/oop_lab_three/build/oop_lab_three_tests" "--gtest_filter=FigureArrayTest.TotalAreaAndCopy" "--gtest_also_run_disabled_tests"
+Directory: /workspaces/alpine/labs/oop_lab_three/build
+"FigureArrayTest.TotalAreaAndCopy" start time: Oct 29 13:33 UTC
+Output:
+----------------------------------------------------------
+Running main() from /workspaces/alpine/labs/oop_lab_three/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = FigureArrayTest.TotalAreaAndCopy
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from FigureArrayTest
+[ RUN      ] FigureArrayTest.TotalAreaAndCopy
+[       OK ] FigureArrayTest.TotalAreaAndCopy (0 ms)
+[----------] 1 test from FigureArrayTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"FigureArrayTest.TotalAreaAndCopy" end time: Oct 29 13:33 UTC
+"FigureArrayTest.TotalAreaAndCopy" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Oct 29 13:33 UTC

@@ -1,0 +1,5 @@
+TrapezoidTest.AreaAndCenterFromInput 1 0.00224804
+RhombusTest.EqualityAndClone 1 0.00193092
+PentagonTest.AreaAndInequality 1 0.00145658
+FigureArrayTest.TotalAreaAndCopy 1 0.00161117
+---

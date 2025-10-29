@@ -5,7 +5,6 @@
 #include <limits>
 #include <ostream>
 #include <stdexcept>
-#include <vector>
 
 std::istream& operator>>(std::istream& is, Point& point) {
     return is >> point.x >> point.y;
@@ -61,18 +60,4 @@ Point PolygonCentroidRaw(const Point* points, std::size_t count) {
     cx *= factor;
     cy *= factor;
     return {cx, cy};
-}
-
-double PolygonSignedArea(const std::vector<Point>& points) {
-    EnsureValidPolygon(points.size());
-    return PolygonSignedAreaRaw(points.data(), points.size());
-}
-
-double PolygonArea(const std::vector<Point>& points) {
-    return std::fabs(PolygonSignedArea(points));
-}
-
-Point PolygonCentroid(const std::vector<Point>& points) {
-    EnsureValidPolygon(points.size());
-    return PolygonCentroidRaw(points.data(), points.size());
 }

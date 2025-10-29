@@ -3,7 +3,6 @@
 #include <array>
 #include <cstddef>
 #include <iosfwd>
-#include <vector>
 
 struct Point {
     double x{0.0};
@@ -20,10 +19,6 @@ inline bool operator!=(const Point& lhs, const Point& rhs) {
 double PolygonSignedAreaRaw(const Point* points, std::size_t count);
 double PolygonAreaRaw(const Point* points, std::size_t count);
 Point PolygonCentroidRaw(const Point* points, std::size_t count);
-
-double PolygonSignedArea(const std::vector<Point>& points);
-double PolygonArea(const std::vector<Point>& points);
-Point PolygonCentroid(const std::vector<Point>& points);
 
 template <std::size_t N>
 double PolygonSignedArea(const std::array<Point, N>& points) {
